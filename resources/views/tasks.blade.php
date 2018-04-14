@@ -5,74 +5,59 @@
         <div class="col-sm-offset-2 col-sm-8">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    S'inscrire Test
+                    Inscription
                 </div>
-
                 <div class="panel-body">
                     <!-- Display Validation Errors -->
                     @include('common.errors')
 
-                    <!-- New Task Form -->
+                    <!-- Formulaire d'inscription -->
                     <form action="{{ url('task')}}" method="POST" class="form-horizontal">
                         {{ csrf_field() }}
 
-                        <!-- Task Name -->
+                        <!-- Nom -->
                         <div class="form-group">
-                            <label for="task-name" class="col-sm-3 control-label">Task</label>
-
+                            <label for="form-nom" class="col-sm-3 control-label">Nom</label>
                             <div class="col-sm-6">
-                                <input type="text" name="name" id="task-name" class="form-control" value="{{ old('task') }}">
+                                <input type="text" name="nom" id="form-nom" class="form-control" placeholder="Dupont">
+                            </div>
+                        </div>
+
+                        <!-- Prénom -->
+                        <div class="form-group">
+                            <label for="form-prenom" class="col-sm-3 control-label">Prénom</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="prenom" id="form-prenom" class="form-control" placeholder="Jean">
+                            </div>
+                        </div>
+
+                        <!-- Mail -->
+                        <div class="form-group">
+                            <label for="form-mail" class="col-sm-3 control-label">E-Mail</label>
+                            <div class="col-sm-6">
+                                <input type="email" name="mail" id="form-mail" class="form-control" placeholder="nom@example.com">
+                            </div>
+                        </div>
+
+                        <!-- Mot de passe -->
+                        <div class="form-group">
+                            <label for="form-passe" class="col-sm-3 control-label">Mot de passe</label>
+                            <div class="col-sm-6">
+                                <input type="password" name="passe" id="form-passe" class="form-control" placeholder="Mot de passe">
                             </div>
                         </div>
 
                         <!-- Add Task Button -->
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-6">
-                                <button type="submit" class="btn btn-default">
-                                    <i class="fa fa-btn fa-plus"></i>Add Task
+                                <button type="submit" class="btn btn-success">
+                                    <i class="fa fa-btn fa-user-plus"></i> S'inscrire
                                 </button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-
-            <!-- Current Tasks -->
-            @if (count($tasks) > 0)
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        Current Tasks
-                    </div>
-
-                    <div class="panel-body">
-                        <table class="table table-striped task-table">
-                            <thead>
-                                <th>Task</th>
-                                <th>&nbsp;</th>
-                            </thead>
-                            <tbody>
-                                @foreach ($tasks as $task)
-                                    <tr>
-                                        <td class="table-text"><div>{{ $task->name }}</div></td>
-
-                                        <!-- Task Delete Button -->
-                                        <td>
-                                            <form action="{{ url('task/'.$task->id) }}" method="POST">
-                                                {{ csrf_field() }}
-                                                {{ method_field('DELETE') }}
-
-                                                <button type="submit" class="btn btn-danger">
-                                                    <i class="fa fa-btn fa-trash"></i>Delete
-                                                </button>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            @endif
         </div>
     </div>
 @endsection
