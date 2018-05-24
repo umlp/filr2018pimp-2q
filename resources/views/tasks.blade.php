@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <div class="col-sm-offset-2 col-sm-8">
+        <div class="col-sm-offset-4 col-sm-8">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Inscription
@@ -51,7 +51,7 @@
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-6">
                                 <button type="submit" class="btn btn-success">
-                                    <i class="fa fa-btn fa-user-plus"></i> S'inscrire
+                                    <i class="fa fa-btn fa-user-plus"></i> Valider
                                 </button>
                             </div>
                         </div>
