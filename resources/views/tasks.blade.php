@@ -49,7 +49,7 @@
 
                         <!-- Bouton pour s'inscrire -->
                         <div class="form-group">
-                            <div class="col-sm-offset-3 col-sm-6">
+                            <div class="col-sm-offset-0 col-sm-6">
                                 <button type="submit" class="btn btn-success">
                                     <i class="fa fa-btn fa-user-plus"></i> Valider
                                 </button>
