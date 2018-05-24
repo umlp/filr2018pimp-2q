@@ -59,9 +59,7 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
         <div class="col-sm-offset-8 col-sm-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
