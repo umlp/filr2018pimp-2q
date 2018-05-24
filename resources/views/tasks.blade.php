@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <div class="col-md-offset-0 col-md-6">
+        <div class="col-lg-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Inscription
@@ -59,8 +59,9 @@
                 </div>
             </div>
         </div>
-
-        <div class="col-md-offset-8 col-md-6">
+     </div>
+     <div class="container">
+        <div class="col-lg-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Inscription
