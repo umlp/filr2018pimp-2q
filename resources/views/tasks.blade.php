@@ -60,9 +60,7 @@
             </div>
         </div>
     </div>
-@endsection
 
-@section('content')
     <div class="container">
         <div class="col-sm-offset-6 col-sm-8">
             <div class="panel panel-default">
